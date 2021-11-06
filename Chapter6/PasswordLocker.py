@@ -7,10 +7,13 @@ PASSWORDS = {'gmail': 'mri99@gmail.com',
 
 
 import sys, pyperclip
+#when no command line argument is provided
 if len(sys.argv) < 2:
  print('Usage: python PassowrdLocker.py [account] - copy account password')
  sys.exit()
-account = sys.argv[1] # first command line arg is the account name
+#first command line arg is the account name
+account = sys.argv[1] 
+#finding passwords in dictionary
 if account in PASSWORDS:
  pyperclip.copy(PASSWORDS[account])
  print('Password for ' + account + ' copied to clipboard.')
